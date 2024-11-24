@@ -21,5 +21,13 @@ namespace interview_project.Controllers
 
             return result;
         }
+
+        [HttpGet("fibonacci/{num}")]
+        public IActionResult GetFibonacci(int num)
+        {
+            var result = _testService.GetFibonacci(num);
+
+            return Ok(result);
+        }
     }
 }

@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\interview-project.Application\interview-project.Application.csproj" />
+    <ProjectReference Include="..\interview-project.Domain\interview-project.Domain.csproj" />
   </ItemGroup>
 
 </Project>
