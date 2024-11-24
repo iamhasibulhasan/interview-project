@@ -65,6 +65,23 @@ namespace interview_project.Infrastructure.Services
             return null;
         }
 
+        public int[] ReverseArray(int[] num)
+        {
+            //{ 1, 2, 3, 4, 5 };
 
+            int left = 0;
+            int right = num.Length - 1;
+
+            while (left < right)
+            {
+                int temp = num[left];
+                num[left] = num[right];
+                num[right] = temp;
+
+                left++;
+                right--;
+            }
+            return num;
+        }
     }
 }

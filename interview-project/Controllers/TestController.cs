@@ -29,5 +29,20 @@ namespace interview_project.Controllers
 
             return Ok(result);
         }
+
+        [HttpPost("reversearray/")]
+        public IActionResult GetFibonacci(int[] arr)
+        {
+            var result = _testService.ReverseArray(arr);
+
+            return Ok(result);
+
+            /**
+             * 
+             * Complexity:
+               Time Complexity: O(n) — The array is traversed once.
+               Space Complexity: O(1) — No additional memory is used.
+             */
+        }
     }
 }

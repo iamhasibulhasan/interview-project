@@ -6,5 +6,6 @@ namespace interview_project.Application.Interfaces
     {
         public Task<IActionResult> GetTest();
         public int[] GetFibonacci(int num);
+        public int[] ReverseArray(int[] num);
     }
 }
