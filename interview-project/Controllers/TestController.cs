@@ -51,13 +51,17 @@ namespace interview_project.Controllers
             var result = _testService.GetSortArray(arr);
 
             return Ok(result);
+        }
 
-            /**
-             * 
-             * Complexity:
-               Time Complexity: O(n) — The array is traversed once.
-               Space Complexity: O(1) — No additional memory is used.
+        [HttpPost("romantoint/")]
+        public IActionResult RomanToInt(string s)
+        {
+            /*
+             * https://leetcode.com/problems/roman-to-integer/
              */
+            var result = _testService.RomanToInt(s);
+
+            return Ok(result);
         }
 
     }

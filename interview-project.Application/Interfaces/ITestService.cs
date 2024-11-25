@@ -8,5 +8,6 @@ namespace interview_project.Application.Interfaces
         public int[] GetFibonacci(int num);
         public int[] ReverseArray(int[] num);
         public List<int> GetSortArray(int[] num);
+        public int RomanToInt(string s);
     }
 }
