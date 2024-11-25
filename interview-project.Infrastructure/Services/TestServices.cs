@@ -30,6 +30,28 @@ namespace interview_project.Infrastructure.Services
             return fibonacciArray;  // Return the full sequence as an array
         }
 
+        public List<int> GetSortArray(int[] num)
+        {
+            //[1,5,4,8,2,1,3,8]
+
+            bool swapped;
+            do
+            {
+                swapped = false;
+                for (int i = 1; i < num.Count(); i++)
+                {
+                    if (num[i - 1] > num[i])
+                    {
+                        int temp = num[i - 1];
+                        num[i - 1] = num[i];
+                        num[i] = temp;
+                        swapped = true;
+                    }
+                }
+            } while (swapped);
+            return new List<int>(num);
+        }
+
 
         public async Task<IActionResult> GetTest()
         {

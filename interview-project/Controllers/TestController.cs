@@ -44,5 +44,21 @@ namespace interview_project.Controllers
                Space Complexity: O(1) — No additional memory is used.
              */
         }
+
+        [HttpPost("sortarray/")]
+        public IActionResult GetSortArray(int[] arr)
+        {
+            var result = _testService.GetSortArray(arr);
+
+            return Ok(result);
+
+            /**
+             * 
+             * Complexity:
+               Time Complexity: O(n) — The array is traversed once.
+               Space Complexity: O(1) — No additional memory is used.
+             */
+        }
+
     }
 }
