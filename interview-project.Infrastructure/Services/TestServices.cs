@@ -153,5 +153,18 @@ namespace interview_project.Infrastructure.Services
             if (s.Length == 0) return true;
             else return false;
         }
+
+        public int StrStr(string haystack, string needle)
+        {
+            /*
+             * 28. Find the Index of the First Occurrence in a String
+             * https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/
+             */
+            if (haystack.Contains(needle))
+            {
+                return haystack.IndexOf(needle);
+            }
+            return -1;
+        }
     }
 }
