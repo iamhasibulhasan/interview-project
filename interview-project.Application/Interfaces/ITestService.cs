@@ -9,5 +9,6 @@ namespace interview_project.Application.Interfaces
         public int[] ReverseArray(int[] num);
         public List<int> GetSortArray(int[] num);
         public int RomanToInt(string s);
+        public bool ValidParentheses(string s);
     }
 }

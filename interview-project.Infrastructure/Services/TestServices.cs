@@ -133,5 +133,25 @@ namespace interview_project.Infrastructure.Services
             }
             return num;
         }
+
+        public bool ValidParentheses(string s)
+        {
+            /*
+             * 20. Valid Parentheses
+             * Input: s = "([])"
+             * Output: true
+             */
+
+            int n = -1;
+            while (s.Length != n)
+            {
+                n = s.Length;
+                s = s.Replace("()", "");
+                s = s.Replace("{}", "");
+                s = s.Replace("[]", "");
+            }
+            if (s.Length == 0) return true;
+            else return false;
+        }
     }
 }

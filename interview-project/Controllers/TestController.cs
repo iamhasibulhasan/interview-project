@@ -64,5 +64,16 @@ namespace interview_project.Controllers
             return Ok(result);
         }
 
+        [HttpPost("validParentheses/")]
+        public IActionResult ValidParentheses(string s)
+        {
+            /*
+             * https://leetcode.com/problems/valid-parentheses/
+             */
+            var result = _testService.ValidParentheses(s);
+
+            return Ok(result);
+        }
+
     }
 }
