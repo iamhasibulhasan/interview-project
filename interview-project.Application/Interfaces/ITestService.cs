@@ -10,5 +10,6 @@ namespace interview_project.Application.Interfaces
         public List<int> GetSortArray(int[] num);
         public int RomanToInt(string s);
         public bool ValidParentheses(string s);
+        public int SearchInsert(int[] nums, int target);
     }
 }

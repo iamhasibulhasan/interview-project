@@ -1,4 +1,5 @@
 ﻿using interview_project.Application.Interfaces;
+using interview_project.Domain;
 using Microsoft.AspNetCore.Mvc;
 
 namespace interview_project.Controllers
@@ -71,6 +72,14 @@ namespace interview_project.Controllers
              * https://leetcode.com/problems/valid-parentheses/
              */
             var result = _testService.ValidParentheses(s);
+
+            return Ok(result);
+        }
+
+        [HttpPost("SearchInsert/")]
+        public IActionResult ValidParentheses([FromBody] SearchInsertDto model)
+        {
+            var result = _testService.SearchInsert(model.nums, model.target);
 
             return Ok(result);
         }

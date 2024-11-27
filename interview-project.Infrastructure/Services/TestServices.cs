@@ -166,5 +166,34 @@ namespace interview_project.Infrastructure.Services
             }
             return -1;
         }
+
+        public int SearchInsert(int[] nums, int target)
+        {
+            /*35. Search Insert Position
+             * https://leetcode.com/problems/search-insert-position/description/
+             * Input: nums = [1,3,5,6], target = 5
+             * Output: 2
+             */
+            int left = 0;
+            int right = nums.Length - 1;
+
+            while (left <= right)
+            {
+                int mid = left + (right - left) / 2;
+
+                if (nums[mid] == target)
+                    return mid; // Target found, return the position
+
+                if (nums[mid] < target)
+                    left = mid + 1; // Search the right half
+                else
+                    right = mid - 1; // Search the left half
+            }
+
+            // If not found, 'left' will be the insert position
+            return left;
+
+
+        }
     }
 }
