@@ -11,5 +11,6 @@ namespace interview_project.Application.Interfaces
         public int RomanToInt(string s);
         public bool ValidParentheses(string s);
         public int SearchInsert(int[] nums, int target);
+        public bool CheckIfExist(int[] arr);
     }
 }

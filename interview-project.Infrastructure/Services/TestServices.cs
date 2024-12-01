@@ -195,5 +195,39 @@ namespace interview_project.Infrastructure.Services
 
 
         }
+
+        public bool CheckIfExist(int[] arr)
+        {
+            /*
+             * 1346. Check If N and Its Double Exist
+             * Input: arr = [10,2,5,3]
+             * Output: true
+             * Explanation: For i = 0 and j = 2, arr[i] == 10 == 2 * 5 == 2 * arr[j]
+             */
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    for (int j = 0; j < arr.Length; j++)
+            //    {
+            //        if (i != j)
+            //        {
+            //            if (arr[i] == 2 * arr[j])
+            //            {
+            //                return true;
+            //            }
+            //        }
+            //    }
+            //}
+            HashSet<int> seen = new();
+            foreach (int i in arr)
+            {
+                if (seen.Contains(2 * i) || (i % 2 == 0 && seen.Contains(i / 2)))
+                {
+
+                    return true;
+                }
+                seen.Add(i);
+            }
+            return false;
+        }
     }
 }

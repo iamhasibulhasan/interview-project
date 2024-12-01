@@ -84,5 +84,13 @@ namespace interview_project.Controllers
             return Ok(result);
         }
 
+        [HttpPost("CheckIfExist/")]
+        public IActionResult CheckIfExist([FromBody] int[] array)
+        {
+            var result = _testService.CheckIfExist(array);
+
+            return Ok(result);
+        }
+
     }
 }
