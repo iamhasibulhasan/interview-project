@@ -1,6 +1,7 @@
 ﻿using interview_project.Application.Interfaces;
 using interview_project.Domain;
 using Microsoft.AspNetCore.Mvc;
+using System.Numerics;
 
 namespace interview_project.Infrastructure.Services
 {
@@ -259,6 +260,34 @@ namespace interview_project.Infrastructure.Services
             }
         }
 
+        public int LengthOfLastWord(string s)
+        {
+            /* 58. Length of Last Word
+             * Input: s = "Hello World"
+             * Output: 5
+             * Explanation: The last word is "World" with length 5.
+             * 
+             */
+            var split_text = s.Trim();
+            var ok = split_text.Split();
+            var res = ok[ok.Length - 1].Length;
+            return res;
+        }
 
+        public int[] PlusOne(int[] digits)
+        {
+            /* 66. Plus One
+             * Input: digits = [1,2,3]
+             * Output: [1,2,4]
+             * Explanation: The array represents the integer 123.
+             * Incrementing by one gives 123 + 1 = 124.
+             * Thus, the result should be [1,2,4].
+             * 
+             */
+            var s = BigInteger.Parse(string.Join("", digits)) + 1;
+            return s.ToString().Select(c => int.Parse(c.ToString())).ToArray();
+
+
+        }
     }
 }

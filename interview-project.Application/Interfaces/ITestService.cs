@@ -13,5 +13,7 @@ namespace interview_project.Application.Interfaces
         public int SearchInsert(int[] nums, int target);
         public bool CheckIfExist(int[] arr);
         public int PassThePillow(int n, int time);
+        public int LengthOfLastWord(string s);
+        public int[] PlusOne(int[] digits);
     }
 }

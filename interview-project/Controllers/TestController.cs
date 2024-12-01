@@ -100,5 +100,21 @@ namespace interview_project.Controllers
             return Ok(result);
         }
 
+        [HttpGet("LengthOfLastWord/")]
+        public IActionResult LengthOfLastWord(string s)
+        {
+            var result = _testService.LengthOfLastWord(s);
+
+            return Ok(result);
+        }
+
+        [HttpPost("PlusOne/")]
+        public IActionResult PlusOne([FromBody] int[] digits)
+        {
+            var result = _testService.PlusOne(digits);
+
+            return Ok(result);
+        }
+
     }
 }
