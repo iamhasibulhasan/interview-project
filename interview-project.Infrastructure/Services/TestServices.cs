@@ -204,6 +204,8 @@ namespace interview_project.Infrastructure.Services
              * Output: true
              * Explanation: For i = 0 and j = 2, arr[i] == 10 == 2 * 5 == 2 * arr[j]
              */
+
+            // the time complexity is O(n²)
             //for (int i = 0; i < arr.Length; i++)
             //{
             //    for (int j = 0; j < arr.Length; j++)
@@ -217,6 +219,8 @@ namespace interview_project.Infrastructure.Services
             //        }
             //    }
             //}
+
+            // the total time complexity is O(n).
             HashSet<int> seen = new();
             foreach (int i in arr)
             {
