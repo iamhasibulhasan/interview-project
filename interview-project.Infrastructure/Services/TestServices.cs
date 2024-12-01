@@ -233,5 +233,32 @@ namespace interview_project.Infrastructure.Services
             }
             return false;
         }
+
+        public int PassThePillow(int n, int time)
+        {
+            /*
+             *2582. Pass the Pillow
+             *
+             *Input: n = 4, time = 5
+             *Output: 2
+             *Explanation: People pass the pillow in the following way: 1 -> 2 -> 3 -> 4 -> 3 -> 2.
+             *After five seconds, the 2nd person is holding the pillow.
+             */
+
+            //List<int> list = Enumerable.Range(1,n).ToList();
+            int cycleLength = 2 * (n - 1);       // Total steps in one forward-backward cycle
+            int positionInCycle = time % cycleLength;
+
+            if (positionInCycle < n - 1)         // Moving forward
+            {
+                return 1 + positionInCycle;
+            }
+            else                                // Moving backward
+            {
+                return n - (positionInCycle - (n - 1));
+            }
+        }
+
+
     }
 }

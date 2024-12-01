@@ -92,5 +92,13 @@ namespace interview_project.Controllers
             return Ok(result);
         }
 
+        [HttpPost("PassThePillow/")]
+        public IActionResult PassThePillow([FromBody] PassThePillowDto model)
+        {
+            var result = _testService.PassThePillow(model.n, model.time);
+
+            return Ok(result);
+        }
+
     }
 }
