@@ -289,5 +289,19 @@ namespace interview_project.Infrastructure.Services
 
 
         }
+
+        public int MyAtoi(string s)
+        {
+            List<int> res = [];
+            var sp = s.Trim().Split();
+            foreach (var c in sp)
+            {
+                if (c != "0")
+                {
+
+                }
+            }
+            return 0;
+        }
     }
 }

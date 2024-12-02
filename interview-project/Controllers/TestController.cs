@@ -116,5 +116,13 @@ namespace interview_project.Controllers
             return Ok(result);
         }
 
+        [HttpPost("MyAtoi/")]
+        public IActionResult MyAtoi(string s)
+        {
+            var result = _testService.MyAtoi(s);
+
+            return Ok(result);
+        }
+
     }
 }
