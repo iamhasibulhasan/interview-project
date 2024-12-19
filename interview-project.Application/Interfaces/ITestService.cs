@@ -17,6 +17,5 @@ namespace interview_project.Application.Interfaces
         public int LengthOfLastWord(string s);
         public int[] PlusOne(int[] digits);
 
-        public List<int> Sortanarrayofint(List<int> array);
     }
 }

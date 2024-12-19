@@ -304,28 +304,8 @@ namespace interview_project.Infrastructure.Services
             return 0;
         }
 
-        public List<int> Sortanarrayofint(List<int> array)
-        {
-            // array = [1,8,6,2,4,5,1] bubble sort
 
-            bool swap = false;
-            do
-            {
-                swap = false;
-                for (int i = 1; i < array.Count; i++)
-                {
-                    if (array[i - 1] > array[i])
-                    {
-                        int temp = array[i - 1];
-                        array[i - 1] = array[i];
-                        array[i] = temp;
-                        swap = true;
-                    }
-                }
-            }
-            while (swap);
 
-            return array;
-        }
+
     }
 }

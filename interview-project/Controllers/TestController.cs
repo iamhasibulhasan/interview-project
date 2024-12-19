@@ -124,13 +124,7 @@ namespace interview_project.Controllers
             return Ok(result);
         }
 
-        [HttpPost("sortanarrayofint/")]
-        public IActionResult SortAnArrayOrInt([FromBody] List<int> array)
-        {
-            var result = _testService.Sortanarrayofint(array);
 
-            return Ok(result);
-        }
 
     }
 }
