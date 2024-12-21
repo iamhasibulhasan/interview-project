@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ITestService, TestServices>();
+builder.Services.AddScoped<INewServices, NewServices>();
 
 var app = builder.Build();
 
