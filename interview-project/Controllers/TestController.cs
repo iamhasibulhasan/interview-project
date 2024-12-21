@@ -124,7 +124,13 @@ namespace interview_project.Controllers
             return Ok(result);
         }
 
+        [HttpPost("palindrome/")]
+        public IActionResult PalindromeCheck([FromBody] string words)
+        {
+            var result = _testService.PalindromeCheck(words);
 
+            return Ok(result);
+        }
 
     }
 }

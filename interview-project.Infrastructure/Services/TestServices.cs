@@ -304,8 +304,37 @@ namespace interview_project.Infrastructure.Services
             return 0;
         }
 
+        public bool PalindromeCheck(string words)
+        {
+            /*
+             * kayak.
+             * deified.
+             * rotator.
+             * repaper.
+             * deed.
+             * peep.
+             * wow.
+             * noon.
+             * */
+            if (string.IsNullOrEmpty(words)) return false;
 
+            words = words.Replace(" ", "").ToLower();
 
+            int left = 0;
+            int right = words.Length - 1;
 
+            while (left < right)
+            {
+                if (words[left] != words[right])
+                {
+                    return false;
+                }
+                left++;
+                right--;
+            }
+
+            return true;
+
+        }
     }
 }
