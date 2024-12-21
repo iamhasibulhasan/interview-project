@@ -124,10 +124,10 @@ namespace interview_project.Controllers
             return Ok(result);
         }
 
-        [HttpPost("sortanarrayofint/")]
-        public IActionResult SortAnArrayOrInt([FromBody] List<int> array)
+        [HttpPost("palindrome/")]
+        public IActionResult PalindromeCheck([FromBody] string words)
         {
-            var result = _testService.Sortanarrayofint(array);
+            var result = _testService.PalindromeCheck(words);
 
             return Ok(result);
         }

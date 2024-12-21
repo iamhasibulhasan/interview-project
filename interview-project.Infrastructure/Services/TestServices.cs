@@ -304,28 +304,37 @@ namespace interview_project.Infrastructure.Services
             return 0;
         }
 
-        public List<int> Sortanarrayofint(List<int> array)
+        public bool PalindromeCheck(string words)
         {
-            // array = [1,8,6,2,4,5,1] bubble sort
+            /*
+             * kayak.
+             * deified.
+             * rotator.
+             * repaper.
+             * deed.
+             * peep.
+             * wow.
+             * noon.
+             * */
+            if (string.IsNullOrEmpty(words)) return false;
 
-            bool swap = false;
-            do
+            words = words.Replace(" ", "").ToLower();
+
+            int left = 0;
+            int right = words.Length - 1;
+
+            while (left < right)
             {
-                swap = false;
-                for (int i = 1; i < array.Count; i++)
+                if (words[left] != words[right])
                 {
-                    if (array[i - 1] > array[i])
-                    {
-                        int temp = array[i - 1];
-                        array[i - 1] = array[i];
-                        array[i] = temp;
-                        swap = true;
-                    }
+                    return false;
                 }
+                left++;
+                right--;
             }
-            while (swap);
 
-            return array;
+            return true;
+
         }
     }
 }

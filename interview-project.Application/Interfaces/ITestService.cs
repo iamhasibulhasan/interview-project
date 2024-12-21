@@ -16,7 +16,6 @@ namespace interview_project.Application.Interfaces
         public int PassThePillow(int n, int time);
         public int LengthOfLastWord(string s);
         public int[] PlusOne(int[] digits);
-
-        public List<int> Sortanarrayofint(List<int> array);
+        public bool PalindromeCheck(string words);
     }
 }
